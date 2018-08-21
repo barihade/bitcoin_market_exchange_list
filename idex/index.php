@@ -11,11 +11,12 @@
         return $result;
     }
 
+    //ticker ini list marketnya
     $ticker = getData("https://api.idex.market/returnTicker");
     if($ticker != null){
         $ticker = (array)json_decode($ticker);
     }
-
+    //currencies ini digunakan untuk mengambil nama dari kode yang ada pada ticker
     $currencies = getData("https://api.idex.market/returnCurrencies");
     if($currencies != null){
         $currencies = (array)json_decode($currencies);
@@ -63,6 +64,7 @@
                 </tr>
                 
                 <?php $i = 1;
+                    // loop sejumlah data ticker, simpan variabelnya ke key
                     foreach ($ticker as $key => $value) {
                         //explode kode untuk memecah berdasarkan '_', karena index 1 itu kode untuk currency nya, maka yang diambil index 1
                         $kode = explode('_', $key)[1];
@@ -70,6 +72,7 @@
                     <tr>
                         <td><?php echo $i; ?></td>
                         <td><?php echo $key; ?></td>
+                        <!-- ini menampilkan nama dari tiap ticker, ngambil dari currencies -->
                         <td><?php echo $currencies["$kode"]->name; ?></td>
                         <td><?php echo number_format((float)$value->high, 9); ?></td>
                         <td><?php echo number_format((float)$value->low, 9); ?></td>
