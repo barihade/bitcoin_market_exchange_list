@@ -1,10 +1,15 @@
 <?php
+    define('BASE_URL', 'http://localhost/bitcoin_market_exchange_list');
+
     function getData($url)
     {
         $curl_handle=curl_init();
         curl_setopt($curl_handle,CURLOPT_URL,$url);
         curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
         curl_setopt($curl_handle,CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($curl_handle, CURLOPT_COOKIEJAR, 'cookies.txt');
+        curl_setopt($curl_handle, CURLOPT_COOKIEFILE, 'cookies.txt');
+        curl_setopt($curl_handle, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0');
         $result = curl_exec($curl_handle);
         curl_close($curl_handle);
 
@@ -42,10 +47,22 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Idex <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">IDEX <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Heat Wallet</a>
+            <a class="nav-link" href="<?php echo BASE_URL;?>/heat_wallet/">HEAT WALLET</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/idax/">IDAX <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/independentreserve/">Independent Reserve<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/itbit/">Itbit<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/koinex/">Koinex<span class="sr-only"></span></a>
           </li>
         </ul>
       </div>

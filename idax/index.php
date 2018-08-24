@@ -1,4 +1,6 @@
 <?php
+    define('BASE_URL', 'http://localhost/bitcoin_market_exchange_list');
+
     function getData($url)
     {
         $curl_handle=curl_init();
@@ -47,13 +49,22 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/idex/">IDEX <span class="sr-only"></span></a>
+            <a class="nav-link" href="<?php echo BASE_URL;?>/idex/">IDEX <span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/heat_wallet/">HEAT WALLET</a>
+            <a class="nav-link" href="<?php echo BASE_URL;?>/heat_wallet/">HEAT WALLET</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/idax/">IDAX <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">IDAX <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/independentreserve/">Independent Reserve<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/itbit/">Itbit<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/koinex/">Koinex<span class="sr-only"></span></a>
           </li>
         </ul>
       </div>

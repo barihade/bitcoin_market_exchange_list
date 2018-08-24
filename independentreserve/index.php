@@ -59,6 +59,12 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Independent Reserve<span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/itbit/">Itbit<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/koinex/">Koinex<span class="sr-only"></span></a>
+          </li>
         </ul>
       </div>
     </nav>
