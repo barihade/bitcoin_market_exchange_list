@@ -66,6 +66,18 @@
           <li class="nav-item">
             <a class="nav-link" href="<?php echo BASE_URL;?>/koinex/">Koinex<span class="sr-only"></span></a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/hotbit/">Hotbit<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/infinity_coin/">InfinityCoin Exchange<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/iquant/">Iquant<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/isx/">ISX<span class="sr-only"></span></a>
+          </li>
         </ul>
       </div>
     </nav>
