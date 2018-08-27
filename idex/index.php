@@ -36,6 +36,7 @@
     <title>Idex Market</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.css" />
+    <meta http-equiv="refresh" content="5">
 </head>
 <body>
 
