@@ -97,7 +97,7 @@
                 ?>
                     <tr scope="row">
                         <td scope="col"><?php echo $i; ?></td>
-                        <td scope="col"><?php echo $key . "_" . $key; ?></td>
+                        <td scope="col"><?php echo $key; ?></td>
                         <td scope="col"><?php echo $value->name; ?></td>
                         <td scope="col"><?php echo number_format((float)$value->high, 9); ?></td>
                         <td scope="col"><?php echo number_format((float)$value->low, 9); ?></td>
